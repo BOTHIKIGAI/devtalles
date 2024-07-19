@@ -49,5 +49,25 @@ class Persona { // Las clases siempre en mayusculas
 
 }
 
-const spiderman = new Persona('Peter Parker', 'Spider-man', 'Soy tu amigable venico spider-man');
-const ironman = new Persona('Tony Stark', 'Ironman', 'Yo soy Ironman');
+class Heroe extends Persona { // Hereda todas las propiedades y metodos
+    clan = 'sin clan';
+
+    constructor (nombre, codigo, frase) {
+        // Siempre va primero el constructor del padre
+        super(nombre, codigo, frase); // Hace referencia a la clase que extiende directamente
+        this.clan = "Avenger" 
+        
+    }
+
+    // Esto sobre escribira los metodos del padre
+    quienSoy() {
+        console.log(`Soy ${this.nombre}, ${this.clan}`);
+        // Si quisieramos llamar el metodo del padre se puede
+        super.quienSoy();
+    }
+
+
+}
+
+const spiderman = new Heroe('Peter Parker', 'Spider-man', 'Soy tu amigable venico spider-man',);
+spiderman.quienSoy()
