@@ -1,7 +1,6 @@
 import _ from 'underscore';
 
 /**
- * 
  * @param {Array<string>} tiposDeCarta 
  * @param {array} tiposEspeciales 
  * @returns {array}
