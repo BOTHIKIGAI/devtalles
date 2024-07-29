@@ -1,0 +1,14 @@
+/**
+ * 
+ * @param {Array<string>} deck 
+ * @returns {String}
+ */
+export const pedirCarta = (deck) => {
+
+    if ( deck.length === 0 ) {
+        throw 'No hay cartas en el deck';
+    }
+    const carta = deck.pop();
+    console.log(carta);
+    return carta;
+}
