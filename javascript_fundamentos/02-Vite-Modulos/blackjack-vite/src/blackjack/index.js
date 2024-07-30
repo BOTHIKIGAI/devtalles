@@ -1,7 +1,5 @@
 import _ from 'underscore'
-import { crearDeck as createNewDeck } from "./usecases/crear-deck";
-import { pedirCarta } from './usecases/take-card';
-import { valorCarta } from './usecases/value-card';
+import {createNewDeck, pedirCarta, valorCarta} from './usecases'
 
 /**
  * 2C = Two of Clubs
@@ -107,7 +105,7 @@ btnNuevo.addEventListener('click', () => {
 
     console.clear();
     deck = [];
-    deck = crearDeck();
+    deck = createNewDeck(tipos, especiales);
 
     puntosJugador     = 0;
     puntosComputadora = 0;
