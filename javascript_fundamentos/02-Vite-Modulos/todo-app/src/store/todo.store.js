@@ -26,6 +26,7 @@ const loadStore = () => {
 
 
 /**
+ * Funcion para filtrar las todo
  * @param {String} filter 
  */
 const getTodos = ( filter = Filters.All) => {
@@ -45,6 +46,7 @@ const getTodos = ( filter = Filters.All) => {
 
 
 /**
+ * Funcion para crear un todo
  * @param {String} description 
  */
 const addTodo = ( description ) => {
@@ -56,14 +58,21 @@ const addTodo = ( description ) => {
 
 
 /**
+ * Funcion para completar tarea
  * @param {String} todoId 
  */
 const toggleTodo = ( todoId ) => {
-    throw new Error('Not implemented')
+    state.todos = state.todos.map( todo => {
+        if ( todo.id === todoId ) {
+            todo.done = !todo.done
+        }
+        return todo
+    })
 }
 
 
 /**
+ * Funcion para eliminar un todo
  * @param {String} todoId 
  */
 const deleteTodo = ( todoId ) => {
