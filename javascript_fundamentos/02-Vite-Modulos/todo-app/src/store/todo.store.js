@@ -11,6 +11,8 @@ const state = {
         new Todo('Pieda del alma'),
         new Todo('Pieda del infinito'),
         new Todo('Pieda del tiempo'),
+        new Todo('Pieda del poder'),
+        new Todo('Pieda del realidad')
     ],
     filter: Filters.All,
 }
